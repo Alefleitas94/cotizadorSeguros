@@ -1,6 +1,7 @@
 import React from 'react';
 import {Mensaje, TextoCotizacion, ResultadoCotizacion} from '../styled-emotion/se_resultado';
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
+import PropTypes from 'prop-types';
 
 const Resultado = ({cotizacion}) => {
 
@@ -24,6 +25,11 @@ const Resultado = ({cotizacion}) => {
        </ResultadoCotizacion>
        )
     )
+}
+
+Resultado.propTypes = {
+    cotizacion = PropTypes.number.isRequired
+
 }
 
 export default Resultado;

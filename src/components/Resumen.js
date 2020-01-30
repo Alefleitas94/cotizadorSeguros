@@ -1,6 +1,7 @@
 import React from 'react';
 import {ContenedorResumen} from '../styled-emotion/se_resumen';
 import {primerMayuscula} from '../helpers/helper'
+import PropTypes from 'prop-types';
 
 const Resumen = ({datos}) => {
 
@@ -21,6 +22,11 @@ const Resumen = ({datos}) => {
                 </ul>
             </ContenedorResumen>
     )
+}
+
+Resumen.propTypes = {
+    
+    datos = PropTypes.object.isRequired
 }
 
 export default Resumen;

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Campo, Label, Select, InputRadio, Boton, Error} from '../styled-emotion/se_formulario'
 import {obtenerDiferenciaYear, calcularMarca, obtenerPlan} from '../helpers/helper'
+import PropTypes from 'prop-types';
 
 const Formulario = ({guardarResumen, guardarCargando}) => {
 
@@ -150,6 +151,11 @@ const Formulario = ({guardarResumen, guardarCargando}) => {
     )
 };
 
-//Formulario.propTypes = {};
+Formulario.propTypes = {
+
+    guardarResumen = PropTypes.func.isRequired,
+    guardarCargando = PropTypes.func.isRequired
+
+};
 
 export default Formulario;
