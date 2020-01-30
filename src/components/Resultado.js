@@ -10,7 +10,7 @@ const Resultado = ({cotizacion}) => {
        ( 
        <ResultadoCotizacion>
        <TransitionGroup
-            component = "p"
+            component = "span"
             className="resultado"
        >
            <CSSTransition
@@ -19,7 +19,7 @@ const Resultado = ({cotizacion}) => {
             timeout= {{enter: 700 , exit: 700}}
            
            >
-             <TextoCotizacion>El total es: ${cotizacion} </TextoCotizacion>
+             <TextoCotizacion>El total es: <span>${cotizacion}</span></TextoCotizacion>
            </CSSTransition>
        </TransitionGroup>
        </ResultadoCotizacion>
@@ -28,7 +28,7 @@ const Resultado = ({cotizacion}) => {
 }
 
 Resultado.propTypes = {
-    cotizacion = PropTypes.number.isRequired
+    cotizacion : PropTypes.number.isRequired
 
 }
 

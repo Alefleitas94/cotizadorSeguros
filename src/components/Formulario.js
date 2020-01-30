@@ -71,7 +71,7 @@ const Formulario = ({guardarResumen, guardarCargando}) => {
 
         //Pasa la informacion al componente principal
         guardarResumen({
-            cotizacion: resultado,
+            cotizacion: Number(resultado),
             datos
          })    
 
@@ -153,8 +153,8 @@ const Formulario = ({guardarResumen, guardarCargando}) => {
 
 Formulario.propTypes = {
 
-    guardarResumen = PropTypes.func.isRequired,
-    guardarCargando = PropTypes.func.isRequired
+    guardarResumen: PropTypes.func.isRequired,
+    guardarCargando: PropTypes.func.isRequired
 
 };
 

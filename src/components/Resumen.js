@@ -25,8 +25,8 @@ const Resumen = ({datos}) => {
 }
 
 Resumen.propTypes = {
-    
-    datos = PropTypes.object.isRequired
+
+    datos : PropTypes.object.isRequired
 }
 
 export default Resumen;
